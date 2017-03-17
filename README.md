@@ -1,5 +1,6 @@
 
-**To use built in  Intellij server: 1.npm install 2.gulp 3. localhost:63342/ProjectName/index.html**
+**1.npm install 2.gulp build 3.gulp**
+**For livereload simply Ctrl+S**
 
 
 # [HTML5 Boilerplate](https://html5boilerplate.com)

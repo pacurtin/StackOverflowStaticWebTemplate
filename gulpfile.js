@@ -13,6 +13,7 @@ var runSequence = require('run-sequence');
 
 var pkg = require('./package.json');
 var dirs = pkg['h5bp-configs'].directories;
+var webserver = require('gulp-webserver');
 
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
@@ -149,6 +150,15 @@ gulp.task('lint:js', function () {
       .pipe(plugins.jshint.reporter('fail'));
 });
 
+gulp.task('serve', function() {
+    gulp.src('dist')
+        .pipe(webserver({
+            port:'9090',
+            livereload: true,
+            open: true
+        }));
+});
+
 
 // ---------------------------------------------------------------------
 // | Main tasks                                                        |
@@ -169,4 +179,4 @@ gulp.task('build', function (done) {
     done);
 });
 
-gulp.task('default', ['build']);
+gulp.task('default', ['serve']);
