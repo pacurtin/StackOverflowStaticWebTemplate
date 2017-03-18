@@ -19,8 +19,21 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate XXX.</p>
+        <p id="p1" >Hello world! This is HTML5 Boilerplate XX.</p>
+
+        <script id="script1">
+            var el = document.getElementById("p1");
+            el.innerHTML = "script1 ran.";
+
+            function script2() {
+                document.getElementById("p1").innerHTML = "script2 ran";
+            }
+        </script>
+
+        <button id="button1" onclick="script2();">Button 1</button>
+
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
